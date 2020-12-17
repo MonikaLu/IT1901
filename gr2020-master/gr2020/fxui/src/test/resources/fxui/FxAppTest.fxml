@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="462.0" prefWidth="351.0" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="fxui.AppController">
+    <children>
+        <Button fx:id="registerNew" layoutX="230.0" layoutY="182.0" onAction="#newMoodRegistration"
+                mnemonicParsing="false" text="Registrer"/>
+        <ComboBox fx:id="moodDropDown" layoutX="35.0" layoutY="113.0" prefHeight="27.0" prefWidth="176.0"/>
+        <TextArea fx:id="moodRegistrations" layoutX="35.0" layoutY="231.0" prefHeight="200.0" prefWidth="269.0"
+                  editable="false"/>
+        <Text layoutX="38.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="På en skala fra  1-5, hvordan var humøret ditt i dag?" wrappingWidth="169.74853515625"/>
+        <Text layoutX="80.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOOD TRACKER"
+              wrappingWidth="190.74853515625">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Text>
+        <Text layoutX="38.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dato:"
+              wrappingWidth="169.74853515625"/>
+        <TextField fx:id="dateInput" layoutX="35.0" layoutY="182.0" promptText="DD.MM.YYYY"/>
+    </children>
+</Pane>

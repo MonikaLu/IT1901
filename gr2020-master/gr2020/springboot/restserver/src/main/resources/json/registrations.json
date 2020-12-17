@@ -1,0 +1,36 @@
+{
+  "days": [
+    {
+      "date": "2020-11-19",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-11-18",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-11-17",
+      "stats": {
+        "Mood": 4,
+        "Sleep": 4,
+        "Motivation": 3
+      }
+    },
+    {
+      "date": "2020-11-16",
+      "stats": {
+        "Mood": 5,
+        "Sleep": 4,
+        "Motivation": 1
+      }
+    }
+  ]
+}

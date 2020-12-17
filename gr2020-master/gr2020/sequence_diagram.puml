@@ -1,0 +1,70 @@
+@startuml
+Brukeren -> Brukergrensesnittet: Legg til en registrering
+
+Brukergrensesnittet->AppControlleren: newMoodRegistration()
+
+AppControlleren -> Restserver: addDay()
+Restserver --> AppControlleren: lagt til day
+
+AppControlleren -> Restserver : getDays()
+Restserver --> AppControlleren : days
+
+AppControlleren -> Brukergrensesnittet: updateRegistrations()
+
+Brukeren -> Brukergrensesnittet: Redigerer en registrering
+
+Brukergrensesnittet -> AppControlleren : editRegistration()
+
+AppControlleren -> Brukergrensesnittet : toggleEditMode()
+
+Brukergrensesnittet --> Brukeren : tillater redigering
+
+Brukeren -> Brukergrensesnittet : legger til nye verdier
+
+Brukergrensesnittet->AppControlleren: updateEditedRegistration()
+
+AppControlleren -> Restserver: updateDay()
+Restserver --> AppControlleren: redigert day
+
+AppControlleren -> Restserver : getDays()
+Restserver --> AppControlleren : days
+
+AppControlleren -> Brukergrensesnittet: updateRegistrations()
+
+Brukeren -> Brukergrensesnittet: Fjerner en registrering
+
+Brukergrensesnittet->AppControlleren: deleteRegistration()
+
+AppControlleren -> Restserver: deleteday()
+
+Restserver --> AppControlleren: slettet day
+
+AppControlleren -> Restserver : getDays()
+Restserver --> AppControlleren : days
+
+AppControlleren -> Brukergrensesnittet: updateRegistrations()
+
+Brukeren -> Brukergrensesnittet: Ønsker statistikk av noen av registreringene
+
+Brukergrensesnittet->AppControlleren: showStatsforDays()
+
+AppControlleren -> Restserver: getDays()
+Restserver --> AppControlleren: days
+
+AppControlleren -> Statistikk : calculateAverageOverPeriod()
+Statistikk --> AppControlleren : resultat
+
+AppControlleren -> Brukergrensesnittet: updateRegistrations()
+
+Brukeren -> Brukergrensesnittet: Ønsker statistikken av alle registreringene
+
+Brukergrensesnittet->AppControlleren: allRegistrationsChecked()
+
+AppControlleren -> Restserver: getDays()
+Restserver --> AppControlleren: days
+
+AppControlleren -> Statistikk : calculateAverageOverPeriod()
+Statistikk --> AppControlleren : resultat
+
+AppControlleren -> Brukergrensesnittet: showStats()
+@enduml

@@ -1,0 +1,101 @@
+@startuml
+AppController --> Days
+AppController --> App
+Days --> Day
+Statistics --> Day
+Statistics --> Days
+FileOperations --> Days
+MoodModelController --> MoodModelService
+MoodModelController --> Days
+MoodModelController --> Day
+MoodModelController --> MoodModelApplication
+MoodModelService --> Days
+MoodModelService --> Day
+
+
+
+
+class Day {
+  {field} LocalDate date;
+  {field} Map<String, Integer> stats;
+  {method}Day (@JsonProperty("date") LocalDate date, @JsonProperty("stats") Map<String, Integer> stats)
+  {method}void addTracker(String stat)
+  {method}LocalDate getDate()
+  {method}Integer getStat(String stat)
+  {method}Map<String, Integer> getStats()
+  {method}Collection<String> getStatsNames()
+  {method}void setDate(LocalDate date)
+  {method}void setStats(Map<String, Integer> stats)
+}
+
+class Days {
+    {field} List<Day> days = new ArrayList<Day>()
+    {method} Collection<Day> getDays()
+    {method} void addDay(Day day)
+    {method} void addNewDay(Map<String, Integer> stats, LocalDate date)
+    {method} void removeDay(Day day)
+    {method} Day getDayByDate(LocalDate date)
+    {method} Collection<LocalDate> getListOfDates()
+    {method} void sortDays()
+}
+
+class FileOperations {
+    {method} Days readFromFile(String filename)
+    {method} void saveToFile(String filename, Days days)
+}
+
+class Statistics {
+    {method} Map<String, Double> calculateAverage(Map<String, List<Integer>> stats)
+    {method} Map<String, Double> calculateAverageOverPeriod(Days days, LocalDate startDate, LocalDate endDate)
+    {method} Map<String, List<Integer>> collectStats(Collection<Day> days)
+    {method} double sum(Collection<Integer> scoreValues)
+    {method} Boolean checkIfDateInPeriod(Day day, LocalDate startDate, LocalDate endDate)
+}
+
+class AppController {
+    {field} Days days
+    {field} String initFilename
+    {method} void initialize()
+    {method} void updateRegistrations()
+    {method} void newMoodRegistration()
+    {method} void showSettings()
+    {method} void hideSettings()
+    {method} TitledPane getActivePane()
+    {method} void deleteMoods()
+    {method} void allRegistrationsChecked(Boolean oldv)
+    {method} void showStatsforDays()
+    {method} void closeModalStats()
+    {method} void showStats(LocalDate startDate, LocalDate endDate)
+    {method} void editMoods()
+}
+
+class App {
+    {method} void start(final Stage stage)
+    {method} void main(final String[] args)
+}
+
+class MoodModelApplication {
+    {method} void main(String[] args)
+}
+
+class MoodModelController {
+    {field} MoodModelService moodModelService
+    {method} MoodModelController()
+    {method} String index()
+    {method} Days getDays()
+    {method} Day getDay(@PathVariable("date") String date)
+    {method} void addNewDay(@RequestBody Day day)
+    {method} void deleteDay(@PathVariable("date") String date)
+}
+
+class MoodModelService {
+    {field} Days days
+    {field} String fileName
+    {method} Days getAllDays()
+    {method} Day getOneDay(LocalDate date)
+    {method} void addNewDay(Day day)
+    {method} void deleteDay(LocalDate date)
+    {method} void getDaysFromFile()
+    {method} void saveDaysToFile()
+}
+@enduml

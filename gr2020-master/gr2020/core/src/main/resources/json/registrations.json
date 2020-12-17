@@ -1,0 +1,76 @@
+{
+  "days": [
+    {
+      "date": "2020-11-19",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-11-18",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-11-17",
+      "stats": {
+        "Mood": 4,
+        "Sleep": 4,
+        "Motivation": 3
+      }
+    },
+    {
+      "date": "2020-11-16",
+      "stats": {
+        "Mood": 5,
+        "Sleep": 4,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-02-02",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "2020-01-05",
+      "stats": {
+        "Mood": 2,
+        "Sleep": 4,
+        "Motivation": 2
+      }
+    },
+    {
+      "date": "2020-01-01",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "1814-01-01",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    },
+    {
+      "date": "1648-05-07",
+      "stats": {
+        "Mood": 1,
+        "Sleep": 1,
+        "Motivation": 1
+      }
+    }
+  ]
+}

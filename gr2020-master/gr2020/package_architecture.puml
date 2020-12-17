@@ -1,0 +1,31 @@
+@startuml
+component core {
+package moodtracker.core
+package moodtracker.json
+}
+
+component jackson {
+}
+
+component fxui {
+	package moodtracker.fxui
+}
+
+component javafx {
+	component fxml {
+	}
+}
+
+component springboot {
+package moodtracker.springboot
+}
+
+moodtracker.fxui ..> moodtracker.core
+moodtracker.fxui ..> moodtracker.json
+moodtracker.json ..> jackson
+moodtracker.springboot ..> moodtracker.core
+moodtracker.springboot ..> moodtracker.json
+
+fxui ..> javafx
+fxui ..> fxml
+@enduml

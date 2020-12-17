@@ -1,0 +1,34 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "java",
+        "name": "CodeLens (Launch) - TestingWebApplication",
+        "request": "launch",
+        "mainClass": "moodtracker.ui.TestingWebApplication",
+        "projectName": "integrationtests"
+    },
+    {
+        "type": "java",
+        "name": "CodeLens (Launch) - MoodModelApplication",
+        "request": "launch",
+        "mainClass": "moodtracker.restserver.MoodModelApplication",
+        "projectName": "springboot.restserver"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch) - Current File",
+        "request": "launch",
+        "mainClass": "${file}"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch)-App<fxui>",
+        "request": "launch",
+        "mainClass": "fxui/fxui.App",
+        "projectName": "fxui"
+    }
+]
+}

@@ -1,0 +1,30 @@
+.root {
+    -fx-background-color: #EAF5FA;
+}
+
+.editPane {
+    -fx-background-color: #EAF5FA;
+    -fx-background-radius: 7;
+    -fx-border-color: #bbdbeb;
+    -fx-border-radius: 7;
+    -fx-border-width: 4;
+    -fx-effect: dropshadow(gaussian, #8dbad1, 5, 0, 0, 5);
+}
+
+.button {
+    -fx-background-color: #A0E3FF;
+    -fx-background-radius: 7;
+    -fx-border-color: #748FB9;
+    -fx-border-width: 3;
+    -fx-border-radius: 7;
+    -fx-effect: dropshadow(gaussian, #748FB9, 3, 0, 0, 5);
+}
+
+.doneButton {
+    -fx-background-color: #82FFC3;
+    -fx-border-color: #439A70;
+}
+
+.buttonPressed {
+    -fx-effect: dropshadow(gaussian, #748FB9, 0, 0, 0, 0);
+}

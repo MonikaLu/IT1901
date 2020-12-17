@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: sdk use java 14.0.2.j9-adpt
+    command: mvn javafx:run
+
+ports:
+  - port: 6080
+
+
